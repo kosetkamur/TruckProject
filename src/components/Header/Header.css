@@ -1,0 +1,150 @@
+header::after {
+  content: "";
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  backdrop-filter: blur(10px);
+}
+
+header {
+  background-image: url("../../media/img/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+header .container {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  opacity: 0.99;
+}
+header .header-components {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+header .header-components h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+header .header-components p {
+  margin-bottom: 8%;
+  width: 360px;
+}
+header .header-components a {
+  text-decoration: none;
+  display: block;
+  padding: 24px 64px;
+  width: 384px;
+  height: 70px;
+  background: #0144D3;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+}
+header .header-components a:hover {
+  background: #3590D6;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 1024px) {
+  header::after {
+    height: 0;
+    width: 0;
+  }
+
+  header .container {
+    width: 800px;
+  }
+  header .container .nav__logo img {
+    width: 50px;
+  }
+  header .header-components {
+    width: 80%;
+  }
+  header .header-components h1 {
+    font-size: 30px;
+  }
+  header .header-components a {
+    width: 320px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header::after {
+    height: 0;
+    width: 0;
+  }
+
+  header {
+    height: 70vh;
+  }
+  header .container .header-components {
+    height: 50vh;
+  }
+  header .container .header-components h1 {
+    font-size: 22px;
+  }
+  header .container .header-components a {
+    width: 300px;
+    height: 60px;
+    font-size: 16px;
+    padding: 20px 60px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  header::after {
+    height: 0;
+    width: 0;
+  }
+
+  header {
+    height: 100vh;
+    position: relative;
+  }
+  header .container .header-components {
+    justify-content: space-between;
+    height: 70vh;
+    width: 80%;
+  }
+  header .container .header-components div {
+    margin-top: 35%;
+  }
+  header .container .header-components div h1 {
+    font-size: 19px;
+  }
+  header .container .header-components div p {
+    width: 300px;
+  }
+  header .container .header-components div a {
+    width: 350px;
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    margin-top: 30%;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  header .container .header-components div a {
+    width: 300px;
+  }
+}
+
+/*# sourceMappingURL=Header.css.map */

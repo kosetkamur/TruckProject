@@ -1,0 +1,58 @@
+.sidebar {
+  height: 100vh;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -14%;
+  top: 0;
+  backdrop-filter: blur(20px);
+  z-index: 4;
+}
+.sidebar__container {
+  width: 90%;
+}
+.sidebar__container .nav__item.close {
+  display: flex;
+  justify-content: end;
+  padding-right: 25px;
+}
+.sidebar__container .nav__item {
+  padding-top: 25px;
+  padding-left: 25px;
+}
+.sidebar__container .nav__item a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.sidebar__container .nav__item .collaborationRef:hover {
+  padding-right: 137px;
+  border-right: 2px solid #0144D3;
+}
+.sidebar__container .nav__item .catalogRef:hover {
+  padding-right: 208px;
+  border-right: 2px solid #0144D3;
+}
+.sidebar__container .nav__item .newsRef:hover {
+  padding-right: 202px;
+  border-right: 2px solid #0144D3;
+}
+.sidebar__container .nav__item .contactsRef:hover {
+  padding-right: 195px;
+  border-right: 2px solid #0144D3;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    height: 70vh;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .sidebar {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=SideBar.css.map */

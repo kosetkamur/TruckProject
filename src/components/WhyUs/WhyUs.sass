@@ -1,0 +1,34 @@
+.conditions-components
+  width: 100%
+  margin: 50px auto 0 auto
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+.condition
+  background-color: rgba(242, 242, 242, 1)
+  border-radius: 15px
+  width: 33%
+  padding: 40px
+  box-sizing: border-box
+  &__num
+    color: rgba(0, 110, 188, 1)
+    font-size: 100px
+    font-weight: 700
+  &__title
+    color: rgba(0, 0, 0, 1)
+    font-size: 32px
+    font-weight: 500
+  &__subtitle
+    color: rgba(63, 62, 62, 1)
+    font-size: 18px
+    font-weight: 400
+
+@media only screen and (max-width: 1024px)
+  .condition
+    padding: 20px
+    &__num
+      font-size: 90px
+    &__title
+      font-size: 30px
+    &__subtitle
+      font-size: 16px

@@ -1,0 +1,72 @@
+nav
+  display: flex
+  flex-direction: row
+  width: 1200px
+  margin: 0 auto
+  justify-content: space-between
+  z-index: 5
+  position: relative
+  .nav__logo
+    width: 100%
+    height: 80px
+    padding-top: 20px
+    a
+      img
+        width: 70px
+  .nav__items
+    display: flex
+    flex-direction: row
+    .nav__item
+      margin-left: 57px
+      a
+        font-family: 'Montserrat', sans-serif
+        font-weight: 400
+        font-size: 18px
+        color: #ffffff
+        text-align: right
+        padding-top: 25px
+        text-decoration: none
+        margin: 0
+        display: block
+      a:hover
+        border-top: 5px solid #0144D3
+        padding-top: 20px
+
+@media only screen and (max-width : 1250px)
+  nav
+    width: 1000px
+
+@media only screen and (max-width : 1024px)
+  nav
+    width: 800px
+    .nav__items .nav__item a
+      font-size: 18px
+
+@media only screen and (max-width : 950px)
+  nav
+    width: 700px
+
+@media only screen and (max-width : 768px)
+  nav
+    width: 600px
+    .nav__items .nav__item a
+      font-size: 14px
+
+@media only screen and (max-width : 650px)
+  nav
+    width: 500px
+
+@media only screen and (max-width : 550px)
+  nav
+    width: 450px
+
+@media only screen and (max-width : 500px)
+  nav
+    width: 400px!important
+
+@media only screen and (max-width : 450px)
+  nav
+    width: 350px!important
+@media only screen and (max-width : 380px)
+  nav
+    width: 300px!important
