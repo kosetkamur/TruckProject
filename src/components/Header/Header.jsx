@@ -3,33 +3,28 @@ import React from 'react';
 import './Header.sass'
 import Navigation from "./Navigation/Navigation";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
+import Form from "../Form";
+import auto from "../../media/img/fura.png"
 
 const Header = () => {
-
     return (
         <header>
-            <nav className="nav">
-                {
-                    (window.innerWidth > 800) ?  <Navigation /> : <BurgerMenu />
-                }
-            </nav>
-            <div className="container">
-                <section className="header-components">
-                    <div className="header-components__description">
-                        <h1>
-                            Официальный дистрибьютер
-                            крупнейших российских производителей
-                        </h1>
-                        <p>
-                            Продуктов питания и непродовольственных товаров
-                        </p>
-                    </div>
-                    <div>
-                        <a href="#form">
-                            Стать партнёрами
-                        </a>
-                    </div>
-                </section>
+            {
+                (window.innerWidth > 1023) ?  <Navigation /> : <BurgerMenu />
+            }
+            <div className="header-component">
+                <div className="header-component__form">
+                    <h1 className="header-component__form_h1">
+                        Cпециализированные решения для перевозки груза, требующего соблюдения температурного режима
+                    </h1>
+                    <p  className="header-component__form_p">
+                        Рассчитайте стоимость грузоперевозки
+                    </p>
+                    <Form />
+                </div>
+                {/*<div className="header-component__img">*/}
+                {/*    <img src={auto} alt="фотография грузовика" />*/}
+                {/*</div>*/}
             </div>
         </header>
     );

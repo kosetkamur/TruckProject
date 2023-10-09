@@ -1,364 +1,122 @@
-#form:target
-  scroll-margin-top: 100px
-.form-cooperation
-  background-color: #3590D6
-  height: 600px
-  position: relative
-  .form
-    width: 1008px
-    height: auto
-    position: absolute
-    left: 50%
-    top: -15%
-    display: block
-    z-index: 5
-    margin-left: -550px
-    padding: 0 50px
-    background-color: #FFFFFF
-    .form-container
-      width: 800px
-      margin: 0 auto
-      .title
-        padding-top: 90px
-        padding-bottom: 30px
-        h3
-          color: rgba(53, 144, 214, 0.5)
-        h2
-          color: #3590D6
-      form
-        display: flex
-        flex-direction: column
-        .form-submit
-          width: 100%
-          display: flex
-          flex-direction: column
-          align-items: center
-          a
-            color: #3590D6
-            width: 390px
-            padding: 10px 0 50px 0
-          input:hover
-            background-color: #0144D3
-            transition: 0.3s
-          input
-            -webkit-appearance: none
-            -moz-appearance: none
-            appearance: none
-            padding: 24px 64px 23px
-            width: 390px
-            height: 69px
-            background-color: #3590D6
-            border: none
-            font-weight: 600
-            font-size: 18px
-            color: #FFFFFF
-          p
-            font-size: 16px
-            color: #3590D6
-            padding: 10px 0
-            text-align: center
-            width: 100%
-            max-width: 390px
-        .form-items
-          display: grid
-          grid-template-columns: repeat(2, 390px)
-          grid-template-rows: repeat(3, auto)
-          padding-bottom: 6%
-          .item1
-            grid-column: 1 / 2
-            grid-row: 1 / 2
-          .item2
-            grid-column: 1 / 2
-            grid-row: 2 / 3
-          .item3
-            grid-column: 1 / 2
-            grid-row: 3 / 4
-          .item4
-            grid-column: 2 / 3
-            grid-row: 1 / 2
-          .item5
-            grid-column: 2 / 3
-            grid-row: 2 / 3
-          .item6
-            grid-column: 2 / 3
-            grid-row: 3 / 4
-          &__item
-            display: block
-            label
-              font-family: 'Montserrat', sans-serif
-              font-style: normal
-              font-weight: 600
-              font-size: 18px
-              line-height: 22px
-              color: #3590D6
-              display: block
-              margin-top: 34px
-            .form-input
-              width: 360px
-              height: 34px
-              background: #FFFFFF
-              border: none
-              border-bottom: 2px solid #3590D6
-              display: block
-            .field__file
-              opacity: 0
-              visibility: hidden
-              position: absolute
-            .field__file-wrapper
-              width: 100%
-              display: flex
-              align-items: center
-              flex-wrap: wrap
-              position: relative
-              margin-top: 0!important
-            .field__file-fake
-              padding: 8px 10px 8px 1px
-              width: 353px
-              height: 20px
-              background: #FFFFFF
-              border: none
-              border-bottom: 2px solid #3590D6
-              font-weight: 400
-              font-size: 13px
-              color: #9c9c9c
-              margin: 0
-            .field__file-button
-              position: absolute
-              right: 25px
-              top: 5px
-              cursor: pointer
-              img
-                width: 100%
-
-
-@media only screen and (max-width : 1440px)
-  .form-cooperation
-    //height: 95vh
-    .form
-      width: 800px
-      margin-left: -462px
-
-@media only screen and (max-width : 1250px)
-  .form-cooperation
-    //height: 85vh
-    .form
-      margin-left: -450px
-      .form-container form .form-items__item .field__file-fake
-        font-size: 12px
-
-@media only screen and (max-width : 1024px)
-  .form-cooperation
-    //height: 85vh
-    .form
-      margin-left: -450px
-      .form-container .title
-        padding-bottom: 10px
-
-@media only screen and (max-width : 950px)
-  .form-cooperation
-    .form
-      width: 650px
-      margin-left: -378px
-      .form-container
-        width: 700px
-        form .form-items
-          grid-template-columns: repeat(2, 350px)
-        form .form-items__item .form-input
-          width: 300px
-        form .form-items__item .field__file-fake
-          width: 295px
-        form .form-items__item .field__file-button
-           right: 44px
-
-@media only screen and (max-width: 800px)
-  .form-cooperation .form
-    width: 631px
-    margin-left: -365px
-    .form-container
-      width: 560px
-      form .form-items
-        grid-template-columns: repeat(2, 290px)
-      form .form-items__item
-        .form-input
-          width: 245px
-        .field__file-fake
-          width: 239px
-      .title
-        padding-top: 82px
-        padding-bottom: 0
-
-
-@media only screen and (max-width: 768px)
-  .form-cooperation .form
-    width: 591px
-    margin-left: -348px
-    .form-container
-      width: 540px
-
-@media only screen and (max-width: 720px)
-  .form-cooperation .form
-    padding: 0
-    width: 654px
-    margin-left: -331px
-    .form-container
-      width: 540px
-
-@media only screen and (max-width: 700px)
-  .form-cooperation .form
-    width: 641px
-    margin-left: -320px
-
-@media only screen and (max-width: 650px)
-  .form-cooperation
-    height: 850px
-    .form
-      width: 533px
-      margin-left: -267px
-      .form-container
-        width: 414px
-        form
-          .form-items
-            grid-template-columns: repeat(1, 420px)
-            grid-template-rows: repeat(6, auto)
-            .item1
-              grid-column: 1 / 2
-              grid-row: 1 / 2
-            .item2
-              grid-column: 1 / 2
-              grid-row: 2 / 3
-            .item3
-              grid-column: 1 / 2
-              grid-row: 3 / 4
-            .item4
-              grid-column: 1 / 2
-              grid-row: 5 / 6
-            .item5
-              grid-column: 1 / 2
-              grid-row: 6 / 7
-            .item6
-              grid-column: 1 / 2
-              grid-row: 7 / 8
-          .form-items__item
-            .form-input
-              width: 401px
-            .field__file-fake
-              width: 392px
-            .field__file-button
-              right: 22px
-
-
-@media only screen and (max-width: 570px)
-  .form-cooperation .form .form-container form
-    .form-submit input
+form
+  display: flex
+  flex-direction: column
+  .form-submit
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    .agree
+      color: rgba(255, 255, 255, 1)
+      font-size: 12px
+      padding: 0 0 15px 0
+      a
+        color: rgba(255, 255, 255, 1)
+        font-weight: bold
+    input:hover
+      background-color: rgba(0, 110, 188, 1)
+      color: rgba(255, 255, 255, 1)
+      border: 2px solid rgba(255, 255, 255, 1)
+      transition: 0.5s
+    input
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      width: 177px
+      height: 45px
+      background-color: rgba(255, 255, 255, 1)
+      border: none
+      font-weight: 700
+      font-size: 15px
+      color: rgba(0, 110, 188, 1)
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 10px
+    p
+      font-size: 16px
+      color: #3590D6
+      padding: 10px 0
+      text-align: center
       width: 100%
-    .form-submit a
-      width: 100%
-      padding: 16px 0 60px 0
-
-@media only screen and (max-width: 570px)
-  .form-cooperation
-    .form
-      width: 502px
-      margin-left: -251px
-      top: -10%
-      .form-container
-        width: 400px
-        form .form-items
-          grid-template-columns: repeat(1, 400px)
-          grid-template-rows: repeat(6, auto)
-        form .form-items__item .form-input
-          width: 390px
-        form .form-items__item .field__file-fake
-          width: 382px
-
-@media only screen and (max-width: 520px)
-  .form-cooperation
-    .form
-      width: 450px
-      margin-left: -224px
-      top: -10%
-      .form-container
-        width: 400px
-        form
-          .form-items
-            grid-template-columns: repeat(1, 400px)
-            grid-template-rows: repeat(6, auto)
-          .form-items__item
-            .form-input
-              width: 390px
-            .field__file-fake
-              width: 382px
-
-@media only screen and (max-width: 500px)
-  .form-cooperation
-    height: 900px
-    .form
-      width: 400px
-      margin-left: -201px
-      top: -10%
-      .form-container
-        width: 320px
-        form .form-items
-          grid-template-columns: repeat(1, 320px)
-          grid-template-rows: repeat(6, auto)
-        form .form-items__item .form-input
-          width: 300px
-        form .form-items__item .field__file-fake
-          width: 293px
-
-@media only screen and (max-width: 450px)
-  .form-cooperation
-    .form
-      width: 390px
-      margin-left: -195px
-      .form-container
-        form .form-items__item .field__file-button
-          right: 15px
-        form .form-items__item .form-input
-          width: 313px
-        form .form-items__item .field__file-fake
-          width: 302px
-        img
-          width: 80%
-
-@media only screen and (max-width: 400px)
-  .form-cooperation
-    .form
-      width: 350px
-      margin-left: -175px
-
-@media only screen and (max-width: 350px)
-  .form-cooperation
-    .form
-      width: 315px
-      margin-left: -154px
-      .form-container
-        width: 280px
-        form .form-items__item
-          .form-input
-            width: 270px
-          .field__file-fake
-            width: 260px
-      .form-container form .form-items
-        grid-template-columns: repeat(1, 277px)
-
-@media only screen and (max-width: 320px)
-  .form-cooperation
-    .form
-      width: 280px
-      margin-left: -141px
-      .form-container
-        width: 250px
-        form .form-items__item
-          .form-input
-            width: 250px
-          .field__file-fake
-            width: 240px
-          .field__file-button
-            right: 31px
+      max-width: 390px
+  .form-items
+    display: grid
+    grid-template-columns: 49% 49%
+    grid-template-rows: repeat(3, auto)
+    gap: 10px 15px
+    .item1
+      grid-column: 1 / 2
+      grid-row: 1 / 2
+    .item2
+      grid-column: 1 / 2
+      grid-row: 2 / 3
+    .item3
+      grid-column: 1 / 2
+      grid-row: 3 / 4
+    .item4
+      grid-column: 2 / 3
+      grid-row: 1 / 2
+    .item5
+      grid-column: 2 / 3
+      grid-row: 2 / 3
+    .item6
+      grid-column: 2 / 3
+      grid-row: 3 / 4
+    &__item
+      display: block
+      .form-input
+        width: 100%
+        height: 50px
+        background: white
+        border-radius: 10px
+        border: 1px solid rgba(255, 255, 255, 1)
+        color: #757575
+        display: block
+        font-size: 14px
+        padding-left: 20px
+        box-sizing: border-box
+      .form-input::placeholder
+        color: rgba(223, 223, 223, 1)
 
 
 
 
+@media only screen and (min-width: 1921px)
+  form .form-items
+    gap: 20px
+  form .form-items__item .form-input
+    height: 75px
+    font-size: 18px
+  form .form-submit .agree
+    font-size: 15px
+  form .form-submit input
+    width: 250px
+    height: 65px
+    font-size: 22px
+    margin-top: 20px
+
+@media only screen and (max-width: 1024px)
+  form
+    .form-items
+      grid-template-columns: 98%
+      grid-template-rows: repeat(6, auto)
+      .item1
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+      .item2
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+      .item3
+        grid-column: 1 / 2
+        grid-row: 3 / 4
+      .item4
+        grid-column: 1 / 2
+        grid-row: 5 / 6
+      .item5
+        grid-column: 1 / 2
+        grid-row: 6 / 7
+      .item6
+        grid-column: 1 / 2
+        grid-row: 7 / 8
 
 

@@ -1,29 +1,42 @@
 import React from 'react';
-import Сondition from "./Сondition/Сondition";
-import "./Сonditions.sass";
+import PlashWhyUs from "./PlashWhyUs/PlashWhyUs";
+import "./WhyUs.sass";
 
-const Сonditions = () => {
+const WhyUs = () => {
     let conditions = [
         {
-            title: "Логистика по всей РФ и СНГ",
-            subtitle: "Предоставляем услуги логистики по всей России и странам СНГ, с собственной транспортной сетью"
+            title: "Перевозим любые грузы"
         },
         {
-            title: "Удобная модель сотрудничества",
-            subtitle: "Электронный документооборот значительно упрощает и ускоряет обмен документами и расчеты с контрагентами"
+            title: "Внимание к качеству"
         },
         {
-            title: "Доставка в срок",
-            subtitle: "Имеем развитую сеть наработанных маршрутов, которые позволяют доставлять груз в срок\n"
+            title: "Доставка груза в оптимальные сроки, по четкому графику"
+        },
+        {
+            title: "Быстрая подача транспорта"
+        },
+        {
+            title: "Страхование груза"
+        },
+        {
+            title: "Наличный и безналичный расчёт (НДС/БЕЗ НДС)"
         },
     ]
     return (
-        <div className="conditions-components">
-            {
-                conditions.map((data, index) => <Сondition data={data} num={index}/>)
-            }
+        <div className="why-us-component">
+            <div className="why-us-component__container">
+                <div className="why-us-component__container_title">
+                    Почему мы
+                </div>
+                <div className="why-us-component__container_plash">
+                    {
+                        conditions.map((data, index) => <PlashWhyUs data={data} key={ index }/>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
 
-export default Сonditions;
+export default WhyUs;

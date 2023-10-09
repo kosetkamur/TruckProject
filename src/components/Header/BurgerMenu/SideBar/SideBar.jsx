@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './SideBar.sass'
-import close from '../../../../media/img/close_white.svg'
+// import close from '../../../../media/img/close_white.svg'
 
 const SideBar = ({ closeSideBar }) => {
 
@@ -13,7 +13,7 @@ const SideBar = ({ closeSideBar }) => {
         <div className="sidebar">
             <div className="sidebar__container">
                 <div className="nav__item close" onClick={ handleButtonClose }>
-                    <img src={ close } alt="Кнопка закрыть" />
+                    {/*<img src={ close } alt="Кнопка закрыть" />*/}
                 </div>
                 <div className="nav__item">
                     <a href="#collaboration" className="collaborationRef">Сотрудничество</a>

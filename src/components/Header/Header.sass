@@ -1,109 +1,78 @@
 header
-  background-image: url("../../media/img/background.png")
-  background-position: center
+  width: 100%
+  background-image: url("../../media/img/fura.png")
   background-size: cover
   background-repeat: no-repeat
-  height: 100%
-  .container
-    width: 1200px
-    height: auto
-    margin: 0 auto
-    position: relative
-    z-index: 3
-    opacity: .99
-
-  .header-components
-    width: 50%
+  padding: 3% 0 5% 0
+  .header-component
+    width: 86%
+    margin: 60px auto 0 auto
     display: flex
-    flex-direction: column
-    justify-content: center
-    height: calc(100vh - 100px)
-    &__description
-      h1
-        font-family: 'Montserrat', sans-serif
-        font-style: normal
-        font-weight: 600
-        font-size: 36px
-        color: #FFFFFF
-      p
-        margin-bottom: 8%
-        width: 360px
-    a
-      text-decoration: none
-      display: block
-      padding: 24px 64px
-      width: 384px
-      height: 70px
-      background: #3590D6
-      border: none
+    flex-direction: row
+    justify-content: flex-end
+    gap: 14px
+    &__form
+      border-radius: 30px
+      background-color: rgba(157, 162, 180, 0.37)
+      width: 60%
+      height: auto
+      padding: 50px 45px
       box-sizing: border-box
-
-      font-family: 'Montserrat', sans-serif
-      font-style: normal
-      font-weight: 600
-      font-size: 18px
-      line-height: 22px
-      text-align: center
-      color: #FFFFFF
-    a:hover
-      background: #0144D3
-      transition: 0.3s
-
-@media only screen and (max-width : 1024px)
-  header
-    .container
-      width: 800px
-      .nav
-        &__logo img
-          width: 50px
-
-    .header-components
-      width: 80%
-      &__description
-        h1
-          font-size: 30px
-      a
-        width: 320px
+      &_h1
+        font-family: 'Onest', sans-serif
+        font-style: normal
+        font-weight: 900
+        font-size: 32px
+        color: #FFFFFF
+        text-align: left
+        line-height: 38px
+        margin: 0
+        padding-bottom: 10px
+      &_p
+        font-family: 'Onest', sans-serif
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        color: #FFFFFF
+        text-align: left
+        padding: 0 0 10px 0
+        margin: 0
 
 
-@media only screen and (max-width : 768px)
-  header .container .header-components
-    &__description
-      h1
-        font-size: 26px
-    a
-      width: 300px
-      height: 60px
-      font-size: 16px
-      padding: 20px 60px
+@media only screen and (min-width: 1440px)
+  header .header-component__form
+    width: 80%
 
-@media only screen and (max-width : 420px)
-  header
-    height: 100vh
-    position: relative
-    .container
-      .header-components
-        justify-content: space-between
-        height: calc(100vh - 30vh)
-        width: 80%
-        &__description
-          margin-top: 35%
-          h1
-            font-size: 22px
-          p
-            width: 300px
-        div
-          a
-            width: 350px
-            position: absolute
-            bottom: -60px
-            left: 0
-            margin-top: 30%
-            font-size: 15px
+@media only screen and (max-width: 1400px)
+  header .header-component__form h1
+    font-size: 36px
+    line-height: 38px
 
-@media only screen and (max-width : 380px)
-  header .container .header-components div a
-    width: 300px
+@media only screen and (max-width: 1120px)
+  header .header-component__form
+    padding: 25px 45px
+    width: 100%
+
+@media only screen and (max-width: 1024px)
+  header .header-component__form h1
+    font-size: 32px
+    line-height: 34px
+  header .header-component
+    margin: 43px auto 0 auto
+    &__form
+      padding: 30px 25px
 
 
-
+@media only screen and (max-width: 800px)
+  header .header-component__form h1
+    font-size: 32px
+    line-height: 34px
+  header .header-component, header .header-component
+    flex-direction: column
+  header .header-component
+    margin: 43px auto 0 auto
+    &__form
+      width: 100%
+      padding: 30px 25px
+    &__img
+      width: 100%

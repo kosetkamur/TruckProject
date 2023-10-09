@@ -1,34 +1,62 @@
-.conditions-components
+.why-us-component
+  background-color: rgba(242, 242, 242, 1)
+  border-radius: 30px
   width: 100%
   margin: 50px auto 0 auto
+  &__container
+    padding: 40px
+    &_title
+      color: rgba(0, 110, 188, 1)
+      font-size: 54px
+      font-weight: 700
+      margin-bottom: 35px
+    &_plash
+      display: grid
+      grid-template-columns: 32% 32% 32%
+      gap: 30px
+.plash
   display: flex
   flex-direction: row
-  justify-content: space-between
-.condition
-  background-color: rgba(242, 242, 242, 1)
-  border-radius: 15px
-  width: 33%
-  padding: 40px
-  box-sizing: border-box
-  &__num
-    color: rgba(0, 110, 188, 1)
-    font-size: 100px
-    font-weight: 700
+  align-items: center
+  margin-bottom: 35px
+  &__img
+    margin-right: 30px
+    img
+      max-width: 44px
+      width: 100%
   &__title
-    color: rgba(0, 0, 0, 1)
-    font-size: 32px
-    font-weight: 500
-  &__subtitle
-    color: rgba(63, 62, 62, 1)
+    color: black
     font-size: 18px
     font-weight: 400
 
-@media only screen and (max-width: 1024px)
-  .condition
-    padding: 20px
-    &__num
-      font-size: 90px
+
+@media only screen and (min-width: 1920px)
+  .plash
+    &__img
+      img
+        max-width: 50px
+        width: 50px
     &__title
-      font-size: 30px
-    &__subtitle
-      font-size: 16px
+      font-size: 24px
+
+@media only screen and (max-width: 1024px)
+  .why-us-component
+    &__container
+      &_plash
+        grid-template-columns: 48% 48%
+        gap: 25px
+
+@media only screen and (max-width: 650px)
+  .why-us-component
+    &__container
+      padding: 30px 25px
+      &_plash
+        grid-template-columns: 100%
+        gap: 0
+      &_title
+        font-size: 36px
+  .plash__img img
+    max-width: 30px
+    min-width: 30px
+  .plash
+    margin-bottom: 20px

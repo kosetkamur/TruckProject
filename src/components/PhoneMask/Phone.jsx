@@ -8,7 +8,7 @@ const Phone = (props) => {
                    mask='+7(999)999-99-99'
                    value={ props.value }
                    onChange={ props.onChange }>
-            {(inputProps) => <input type="tel" name='contact_phone' {...inputProps} placeholder='+7 (   ) __-__-__ ' required className="form-input"/>}
+            {(inputProps) => <input type="tel" name='contact_phone' {...inputProps} placeholder='Ваш номер телефона' required className="form-input"/>}
         </InputMask>
     );
 };

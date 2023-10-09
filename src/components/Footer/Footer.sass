@@ -1,0 +1,59 @@
+footer
+  margin-top: 150px
+  .footer__container
+    width: 100%
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding-bottom: 10px
+    &_logo
+      width: 100%
+      max-width: 103px
+    &_items
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+      max-width: 397px
+      width: 100%
+      box-sizing: border-box
+      &__item a
+        text-decoration: none
+        font-size: 20px
+        font-weight: 500
+        color: rgba(63, 62, 62, 1)
+  .footer__politic
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 10px 0 50px 0
+    &_text
+      max-width: 550px
+    a
+      color: #FF7700
+
+@media only screen and (max-width: 650px)
+  footer
+    margin-top: 100px
+    .footer__container
+      border-bottom: none
+      display: flex
+      flex-direction: column
+      width: 100%
+      &_items
+        display: flex
+        flex-direction: column
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+        border-top: 1px solid rgba(0, 0, 0, 0.5)
+        width: 100%
+        max-width: 650px
+        margin: 15px 0
+        padding: 15px 0
+        gap: 10px
+        &__item a
+          font-size: 14px
+    .footer__politic
+      text-align: left
+      padding: 0 0 50px 0

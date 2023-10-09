@@ -10,9 +10,9 @@ const Submit = ({ response }) => {
     }
     return (
         <div className="form-submit">
+            <Agreement />
             <input type='submit' name='submit' value="Отправить заявку"/>
             {okResponse}
-            <Agreement />
         </div>
     );
 };

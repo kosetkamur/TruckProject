@@ -1,0 +1,89 @@
+.title-transport
+  font-size: 32px
+  text-align: left
+  font-weight: 700
+  color: black
+  max-width: 517px
+.transport
+  margin-bottom: 50px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  &__img img
+    max-width: 634px
+    width: 100%
+    min-width: 400px
+  &__subscribe
+    display: flex
+    flex-direction: column
+    &_values
+      &__item
+        display: flex
+        flex-direction: row
+        align-items: center
+        align-self: center
+        padding-bottom: 5px
+        &_img
+          padding-right: 14px
+          max-width: 24px
+          width: 100%
+        &_text
+          color: #3F3E3E
+          font-size: 18px
+          font-weight: 400
+        &_button:hover
+          border: 2px solid rgba(0, 110, 188, 1)
+          background-color: #F2F2F2
+          color: rgba(0, 110, 188, 1)
+          transition: 0.3s
+        &_button
+          max-width: 271px
+          width: 100%
+          height: 45px
+          padding: 12px 20px 12px 20px
+          border-radius: 10px
+          color: white
+          background-color: #006EBC
+          border: none
+          font-size: 15px
+          font-weight: 700
+
+.margin-item
+  margin-bottom: 30px
+
+@media only screen and (max-width: 900px)
+  .transport
+    margin-bottom: 50px
+    display: flex
+    flex-direction: column-reverse
+    gap: 30px
+    align-items: flex-start
+    &__subscribe
+        &_values
+          &__item
+            &_text
+              font-size: 14px
+            &_img img
+              max-width: 27px
+              min-width: 27px
+
+@media only screen and (max-width: 600px)
+  .title-transport
+    font-size: 24px
+  .transport
+    margin-bottom: 50px
+    display: flex
+    flex-direction: column-reverse
+    gap: 30px
+    align-items: flex-start
+    &__img img
+      max-width: 634px
+      width: 100%
+      min-width: 180px
+  .margin-item
+    margin-bottom: 20px
+
+@media only screen and (max-width: 350px)
+  .transport__subscribe_values__item_button
+    font-size: 12px

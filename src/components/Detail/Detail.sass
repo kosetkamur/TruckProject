@@ -1,12 +1,19 @@
-.title-component
-  background-color: rgba(242, 242, 242, 1)
-  width: min-content
-  border-radius: 50px
-  font-size: 54px
-  color: rgba(0, 110, 188, 1)
-  font-weight: 700
-  padding: 10px 40px
-  margin-top: 125px
+.detail-component
+  width: 100%
+  &__container
+    display: flex
+    flex-direction: row
+    &_left
+      &__title
+        padding: 0
+        margin: 0
+      &__subtitle
+        padding: 0
+        margin: 0
+    &_right
+      &__text
+        padding: 0
+        margin: 0
 
 @media only screen and (max-width: 1024px)
   .title-component

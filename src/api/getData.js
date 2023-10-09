@@ -1,5 +1,5 @@
 import axios from 'axios';
-const urlNews = 'https://ooomlk.ru/api/news.list';
+const urlNews = '';
 
 export default class GetData {
     static async getNews() {

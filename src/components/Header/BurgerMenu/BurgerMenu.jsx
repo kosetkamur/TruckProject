@@ -13,7 +13,7 @@ const BurgerMenu = () => {
         <div className="burger-menu-container">
             <div className="nav__logo">
                 <a href="#">
-                    <img src={logo} alt="Логотип ООО МОЛОКО"/>
+                    <img src={logo} alt="Логотип ООО ПТК"/>
                 </a>
             </div>
             {

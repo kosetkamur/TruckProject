@@ -1,15 +1,10 @@
-export const backendHost = 'https://ooomlk.ru/';
+export const backendHost = '';
 
 export const initialState = {
+    departure: "",
+    description: "",
     full_name: "",
-    contact_phone: "",
-    email: "",
-    company_name: "",
-    comment: "",
-}
-export const initialCatalogState = {
-    name: "",
-    contact_phone: "",
-    email: "",
-    company_name: ""
+    destination: "",
+    weight: "",
+    contact_phone: ""
 }

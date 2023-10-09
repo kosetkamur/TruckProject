@@ -1,0 +1,62 @@
+.contact-button:hover
+  transform: scale(1.03)
+.contact-button
+  display: flex
+  flex-direction: column
+  align-content: space-between
+  max-width: 297px
+  min-width: 297px
+  width: 100%
+  height: 150px
+  border-radius: 15px
+  background-color: rgba(242, 242, 242, 1)
+  padding: 0 45px 5px 45px
+  text-decoration: none
+  box-sizing: border-box
+  &__title
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding-bottom: 10px
+    p
+      color: black
+      font-size: 24px
+      font-weight: 400
+      text-decoration: none
+    img
+      width: 100%
+      min-width: 22.63px
+      max-width: 22.63px
+  &__info
+    color: #FF7700
+    font-size: 20px
+    font-weight: 400
+    text-decoration: underline
+
+@media only screen and (max-width: 1200px)
+  .contact-button
+    max-width: 1000px
+    min-width: auto
+    width: 100%
+
+@media only screen and (max-width: 1024px)
+  .contact-button
+    min-width: 310px
+    width: 100%
+    padding: 10px 15px 10px 25px
+    &__title
+      padding-bottom: 0
+  .contact-button__info
+    font-size: 16px
+
+@media only screen and (max-width: 750px)
+  .contact-button
+    min-width: 250px
+
+@media only screen and (max-width: 600px)
+  .contact-button
+    max-width: 600px
+    min-width: auto
+    width: 100%
+    padding: 10px 25px
+

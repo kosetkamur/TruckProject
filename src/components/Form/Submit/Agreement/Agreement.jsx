@@ -18,7 +18,12 @@ const Agreement = () => {
     }
 
     return (
-        <a href={ agreementFile } download className='agree'>Нажимая кнопку отправки, вы даете согласие на обработку своих персональных данных</a>
+        <div className='agree'>
+            Нажимая на кнопку, Вы даете согласие на&nbsp;
+            <a href={ agreementFile } download>
+                обработку своих персональных данных
+            </a>
+        </div>
     );
 };
 

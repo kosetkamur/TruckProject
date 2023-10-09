@@ -1,0 +1,76 @@
+.popup .closePopup
+  animation: fadeOut .6s forwards
+.popup
+  background-color: rgba(0, 0, 0, 0.2)
+  height: 100%
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 999
+  animation: fade .6s forwards
+  overflow: auto
+  opacity: 0
+  &__container
+    overflow-x: hidden
+    background-color: rgba(0, 110, 188, 1)
+    border-radius: 30px
+    height: auto
+    width: 53%
+    display: flex
+    flex-direction:  column
+    justify-content: center
+    padding: 50px 45px
+    box-sizing: border-box
+    &_subscribe
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      &__title
+        font-weight: 900
+        font-size: 46px
+        color: rgba(255, 255, 255, 1)
+        margin: 0 0 30px 0
+        line-height: 37px
+      &__close
+        border: none
+        background-color: transparent
+        color: white
+        font-weight: normal
+        cursor: pointer
+        transition: 0.3s
+        display: flex
+        align-content: flex-start
+      &__close::after
+        font-size: 54px
+        display: block
+        content: "×"
+
+
+
+@keyframes fade
+  100%
+    opacity: 1
+    transition: 0.3s
+
+@keyframes fadeOut
+  100%
+    opacity: 0
+    transition: 0.3s
+
+
+@media only screen and (max-width : 1250px)
+  .new-popup .new
+    width: 90%
+    height: 90%
+
+@media only screen and (max-width : 600px)
+  .new-popup .new .new-container p.body
+    font-size: 12px
+
+@media only screen and (max-width : 320px)
+  .new-popup .new .new-container
+    overflow: scroll
