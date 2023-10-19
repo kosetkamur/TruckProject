@@ -13,22 +13,22 @@ const Navigation = () => {
                     </a>
                     <div className="nav__container_logo_subtitle">
                         ООО “ПТК”<br />
-                        услуги логистики по РФ
+                        услуги логистики по&nbsp;РФ
                     </div>
                 </div>
                 <div className="nav__container_items">
-                    <div className="nav__container_item">
+                    <div className="nav__container_items__item">
                         <a href="#transport">Транспорт</a>
                     </div>
-                    <div className="nav__container_item">
+                    <div className="nav__container_items__item">
                         <a href="#conditions">Условия</a>
                     </div>
-                    <div className="nav__container_item">
+                    <div className="nav__container_items__item">
                         <a href="#contacts">Контакты</a>
                     </div>
                 </div>
-                <div className="nav__container_items">
-                    <a className="nav__container_items__phone" href="tel:+7 999 967-99-53">+7 999 967-99-53</a>
+                <div className="nav__container_item-phone">
+                    <a className="nav__container_item-phone__phone" href="tel:+7 999 967-99-53">+7 999 967-99-53</a>
                 </div>
             </div>
         </nav>

@@ -18,16 +18,16 @@ const Form = () => {
         setIsLoading(true);
 
         let formdata = new FormData();
-        formdata.append('departure', data.departure);
-        formdata.append('description', data.description);
-        formdata.append('full_name', data.full_name);
-        formdata.append('destination', data.destination);
-        formdata.append('weight', data.weight);
+        formdata.append('name', data.name);
         formdata.append('contact_phone', data.contact_phone);
-
+        formdata.append('departure', data.departure);
+        formdata.append('arrival', data.arrival);
+        formdata.append('weight', data.weight);
+        formdata.append('description', data.description);
+        formdata.append('transport', data.transport);
         axios({
             method: "post",
-            url: "",
+            url: "http://raigored.beget.tech/api/bids.price.create",
             data: formdata,
             headers: { "Content-Type": "multipart/form-data" },
         })
@@ -40,12 +40,13 @@ const Form = () => {
             })
 
         setData({
-            departure: "",
-            description: "",
-            full_name: "",
-            destination: "",
-            weight: "",
-            contact_phone: ""
+            "name": "",
+            "contact_phone": "",
+            "departure": "",
+            "arrival": "",
+            "weight": "",
+            "description": "",
+            "transport": ""
         })
     }
 
@@ -90,7 +91,7 @@ const Form = () => {
                                name='full_name'
                                placeholder='Ваше имя'
                                className="form-input"
-                               value={ data.full_name || "" }
+                               value={ data.name || "" }
                                onChange={ handleInputChange }
                                required/>
                     </div>
@@ -99,7 +100,7 @@ const Form = () => {
                                name='destination'
                                placeholder='Куда везти'
                                className="form-input"
-                               value={ data.destination || "" }
+                               value={ data.arrival || "" }
                                onChange={ handleInputChange }
                                required/>
                     </div>

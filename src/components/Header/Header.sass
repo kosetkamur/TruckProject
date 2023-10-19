@@ -1,16 +1,19 @@
 header
+  height: max-content
   width: 100%
   background-image: url("../../media/img/fura.png")
   background-size: cover
+  background-position: center
   background-repeat: no-repeat
-  padding: 3% 0 5% 0
+  padding: 2% 0
+  box-sizing: border-box
   .header-component
     width: 86%
-    margin: 60px auto 0 auto
+    margin: 2% auto
     display: flex
     flex-direction: row
     justify-content: flex-end
-    gap: 14px
+    align-content: space-between
     &__form
       border-radius: 30px
       background-color: rgba(157, 162, 180, 0.37)
@@ -76,3 +79,12 @@ header
       padding: 30px 25px
     &__img
       width: 100%
+
+@media only screen and (max-width: 380px)
+  header .header-component__form h1
+    font-size: 18px
+    line-height: 24px
+  header .header-component__form_p
+    font-size: 16px
+  header .header-component__form
+    padding: 20px 15px

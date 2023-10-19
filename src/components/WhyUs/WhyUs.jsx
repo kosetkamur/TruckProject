@@ -1,39 +1,44 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+
 import PlashWhyUs from "./PlashWhyUs/PlashWhyUs";
 import "./WhyUs.sass";
+import {GetWhyUs} from "../../api/getWhyUsData";
 
 const WhyUs = () => {
-    let conditions = [
-        {
-            title: "Перевозим любые грузы"
-        },
-        {
-            title: "Внимание к качеству"
-        },
-        {
-            title: "Доставка груза в оптимальные сроки, по четкому графику"
-        },
-        {
-            title: "Быстрая подача транспорта"
-        },
-        {
-            title: "Страхование груза"
-        },
-        {
-            title: "Наличный и безналичный расчёт (НДС/БЕЗ НДС)"
-        },
-    ]
+
+    const [ cooperation, setCooperation ] = useState([]);
+
+    useEffect(() => {
+        console.log()
+        GetWhyUs().then(data => {
+            setCooperation(data);
+        });
+    }, []);
+
     return (
         <div className="why-us-component">
             <div className="why-us-component__container">
-                <div className="why-us-component__container_title">
-                    Почему мы
-                </div>
-                <div className="why-us-component__container_plash">
+                <Swiper
+                    slidesPerView={'auto'}
+                    modules={[Pagination]}
+                    className="mySwiper"
+                >
                     {
-                        conditions.map((data, index) => <PlashWhyUs data={data} key={ index }/>)
+                        cooperation.map((data) =>
+                            <SwiperSlide>
+                                <PlashWhyUs className="swiper-slide"
+                                                    description={ data.description }
+                                                    icon={ data.icon }
+                                                    card_color={ data.card_color }
+                                                    key={ data.icon } />
+                            </SwiperSlide>
+                        )
                     }
-                </div>
+                </Swiper>
             </div>
         </div>
     );

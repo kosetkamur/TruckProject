@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import GetAgreement from "../../../../api/getAgreement";
+import {GetAgreement} from "../../../../api/getAgreement";
+import {backendHost} from "../../../../const";
 
 const Agreement = () => {
 
@@ -8,13 +9,13 @@ const Agreement = () => {
     let agreementFile;
 
     useEffect(() => {
-        GetAgreement.GetFile().then(resp => {
+        GetAgreement().then(resp => {
             setFile(resp);
         });
     }, []);
 
     if(typeof file === 'object') {
-        agreementFile = 'https://ooomlk.ru' + file.file
+        agreementFile = backendHost + file.file
     }
 
     return (

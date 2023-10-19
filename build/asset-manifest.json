@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.878b4c66.css",
+    "main.js": "/static/js/main.93ce481d.js",
+    "static/media/logo.svg": "/static/media/logo.c8888d21b443bf49c22aa7b05b012e93.svg",
+    "static/media/fura.png": "/static/media/fura.5077163617b51f24f867.png",
+    "static/media/card1.png": "/static/media/card1.901a38a37f38956336c5.png",
+    "static/media/map.png": "/static/media/map.4191aef72293fe4513ee.png",
+    "static/media/Onest-Black.woff": "/static/media/Onest-Black.38643e752f7fd0ec7e30.woff",
+    "static/media/Onest-ExtraBold.woff": "/static/media/Onest-ExtraBold.1feaefc61bc73d6076cb.woff",
+    "static/media/Onest-Bold.woff": "/static/media/Onest-Bold.6d4b74b5ebbbe060e9ab.woff",
+    "static/media/Onest-Medium.woff": "/static/media/Onest-Medium.d4a45b3cf3cd09bd23af.woff",
+    "static/media/Onest-Regular.woff": "/static/media/Onest-Regular.2ae3db8f6997555aaabb.woff",
+    "static/media/Onest-Light.woff": "/static/media/Onest-Light.83a0ce47f315f0c14b6b.woff",
+    "static/media/Onest-Thin.woff": "/static/media/Onest-Thin.d56b8735a1fadf72d0ad.woff",
+    "static/media/Onest-Black.woff2": "/static/media/Onest-Black.e7488014ab0ef09a1a1d.woff2",
+    "static/media/Onest-ExtraBold.woff2": "/static/media/Onest-ExtraBold.5f830644b1cd22ec10e3.woff2",
+    "static/media/Onest-Bold.woff2": "/static/media/Onest-Bold.6bf8979df114ad6be7cf.woff2",
+    "static/media/Onest-Medium.woff2": "/static/media/Onest-Medium.af6f8fd2391b7554b62f.woff2",
+    "static/media/Onest-Regular.woff2": "/static/media/Onest-Regular.3be157b7ce8462d1e23c.woff2",
+    "static/media/Onest-Light.woff2": "/static/media/Onest-Light.12c8ecfd81773fe32d0a.woff2",
+    "static/media/Onest-Thin.woff2": "/static/media/Onest-Thin.0d3d445c504ed793209e.woff2",
+    "static/media/auto.svg": "/static/media/auto.1e0f03f42166d972e977a3b09d710950.svg",
+    "static/media/icon.svg": "/static/media/icon.ae9425e12e0ac49cef03da94dae1aa85.svg",
+    "index.html": "/index.html",
+    "static/media/arrow.svg": "/static/media/arrow.9e2565003d6e923a5b642c99d885df3d.svg",
+    "static/media/menu.svg": "/static/media/menu.5b1bb99096a2619af4185de26c5ebca9.svg",
+    "main.878b4c66.css.map": "/static/css/main.878b4c66.css.map",
+    "main.93ce481d.js.map": "/static/js/main.93ce481d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.878b4c66.css",
+    "static/js/main.93ce481d.js"
+  ]
+}

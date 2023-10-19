@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from "../../../media/img/logo1.svg";
+import {backendHost} from "../../../const";
 
-const PlashWhyUs = ({data}) => {
+const PlashWhyUs = ({ description, icon, card_color }) => {
     return (
-        <div className="plash">
+        <div className="plash" style={{backgroundColor: `${card_color}`}}>
+            <div className="plash__title">{ description }</div>
             <div className="plash__img">
-                {/*<img src={ 'https://ooomlk.ru'+catalog.icon } alt="иконка категории" />*/}
-                <img src={ logo } alt="иконка" />
+                <img src={ `${backendHost}${icon}` } alt="карточка" />
             </div>
-            <div className="plash__title">{data.title}</div>
         </div>
     );
 };

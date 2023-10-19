@@ -1,73 +1,65 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 import "./Transports.sass";
-import Transport from "./Transport/Transport";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import Title from "../Title/Title";
+import MeadiaTransport from "./MeadiaTransport/MeadiaTransport";
+import {getMakes} from "../../api/getMakesData";
+import TransportsList from "./TransportsList/TransportsList";
+import {backendHost} from "../../const";
+import axios from "axios";
+import {useQuery} from "react-query";
+import {GetTransports} from "../../api/getTransportsData";
+
 
 const Transports = ({ handleShow }) => {
 
-    let transports = [{
-        title: "Автопоезд с рефрижераторным прицепом",
-        transport_body: "рефрижиратор",
-        length: 1.5,
-        width: 3.3,
-        height: 10.5,
-        volume: 86,
-        load_capacity: "20 тонн",
-        load_side: "задняя",
-        capacity: 33,
-        help_text: "Так же можно будет осуществлять перевозку как изотермический прицеп",
-    },{
-        title: "Автопоезд с рефрижераторным прицепом",
-        transport_body: "рефрижиратор",
-        length: 1.5,
-        width: 3.3,
-        height: 10.5,
-        volume: 86,
-        load_capacity: "20 тонн",
-        load_side: "задняя",
-        capacity: 33,
-        help_text: "Так же можно будет осуществлять перевозку как изотермический прицеп",
-    }]
+    const [ categories, setCategories ] = useState([]);
+    // const [ cat, setCat ] = useState(1);
+    const [ transports, setTransport ] = useState([]);
 
+    useEffect(() => {
+        GetTransports().then(data => setTransport(data));
+        getMakes().then(data => setCategories(data));
+    }, []);
+
+    // async function fetchTransport(id = 1) {
+    //     const data = await axios.get(`${backendHost}/api/goods.transport.list?transport_make_id=${id}`);
+    //     return data.data;
+    // }
+
+    // const { data } = useQuery(
+    //     ["transport_make_id", cat],
+    //     () => fetchTransport(cat),
+    //     { keepPreviousData: true });
     return (
         <>
-            <Title title={"Транспорт"} />
             <div className="transports-component" id="transport">
-                <p className="transports-component__subtitle">
-                    Все машины – это <strong style={{color: "#488ACD"}}>новый</strong> автопарк.
-                </p>
-                <p className="transports-component__subtitle">
-                    Среди них основными являются машины 2023 года SITRAK и FAW
-                </p>
-                <Swiper
-                    spaceBetween={30}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Pagination]}
-                    className="mySwiper"
-                >
-                    {
-                        transports.map(transport =>
-                            <SwiperSlide><Transport className="swiper-slide"
-                                       title={ transport.title }
-                                       length={ transport.length }
-                                       width={ transport.width }
-                                       height={ transport.height }
-                                       volume={ transport.volume }
-                                       load_capacity={ transport.load_capacity }
-                                       load_side={ transport.load_side }
-                                       capacity={ transport.capacity }
-                                       transport_body={ transport.transport_body }
-                                       help_text={ transport.help_text }
-                                       handleShow={ handleShow }
-                            /></SwiperSlide>)
-                    }
-                </Swiper>
+                <div className="transports-component__text">
+                    <p className="transports-component__text_subtitle">
+                        Все машины – это <strong style={{color: "#488ACD"}}>новый</strong> автопарк.
+                    </p>
+                    <p className="transports-component__text_subtitle">
+                        Среди них основными являются машины 2023 года <strong style={{color: "#488ACD"}}>SITRAK</strong> и <strong style={{color: "#488ACD"}}>FAW</strong>
+                    </p>
+                </div>
+                <div className="transports-component__container">
+                    <div className="transports-component__container_images">
+                        {
+                            transports.map(transport => <MeadiaTransport media={ transport.media }/>)
+                        }
+                    </div>
+                    <div className="transports-component__container_transports">
+                        {/*<div className="transports-component__container_transports__buttons">*/}
+                        {/*    {*/}
+                        {/*        categories.map(category =>*/}
+                        {/*            <div key={category.id} className="transports-component__container_transports__buttons_button">*/}
+                        {/*                <button onClick={ () => setCat(category.id) }>{ category.title }</button>*/}
+                        {/*            </div>*/}
+                        {/*        )*/}
+                        {/*    }*/}
+                        {/*</div>*/}
+                    </div>
+                    <TransportsList handleShow={handleShow}/>
+                </div>
             </div>
         </>
     );

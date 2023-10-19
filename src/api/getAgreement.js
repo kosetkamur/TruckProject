@@ -1,14 +1,12 @@
 import axios from 'axios';
-const url = 'https://ooomlk.ru/api/core.agreement';
+import {backendHost} from "../const";
 
-
-export default class GetAgreement {
-    static async GetFile() {
-        try{
-            let data = await axios.get(url);
-            return data.data.data;
-        } catch (e) {
-            console.log(e)
-        }
+export const GetAgreement = async () => {
+    try{
+        let getData = await axios.get(`${backendHost}/api/core.agreement`);
+        return getData.data.data;
+    }
+    catch (e){
+        console.log(e)
     }
 }

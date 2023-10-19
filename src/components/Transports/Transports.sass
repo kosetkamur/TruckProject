@@ -1,12 +1,23 @@
 .transports-component
-  background-color: #F2F2F2
-  border-radius: 30px
-  padding: 40px
-  margin: 75px 0
-  &__title
-    font-weight: 700
-    color: #006EBC
-    font-size: 54px
+  width: 100%
+  &__text
+    padding-left: 45px
+    margin: 3% auto
+    &_subtitle
+      color: #000
+      font-size: 24px
+      font-weight: 400
+      padding: 0
+      margin: 0
+  &__container
+    background-color: #F2F2F2
+    border-radius: 30px
+    padding: 40px
+    display: flex
+    flex-direction: row
+    &_images
+      width: 45%
+      margin-right: 20px
 
 .swiper
   width: 100%
@@ -37,9 +48,20 @@
 
 @media only screen and (max-width: 600px)
   .transports-component
-    padding: 50px 25px
+    padding: 0
     margin: 50px 0
     &__title
       font-size: 36px
+    &__text
+      padding: 0 0 0 25px
+    &__container
+      display: flex
+      flex-direction: column-reverse
+      &_images
+        width: 100%
   .swiper-pagination-bullet
     width: 40px!important
+
+@media only screen and (max-width: 475px)
+  .transports-component__container
+    padding: 20px

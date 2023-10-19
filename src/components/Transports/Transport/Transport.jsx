@@ -3,19 +3,24 @@ import icon from "../../../media/img/icon.svg";
 import "./Transport.sass";
 import auto from ".././../../media/img/auto.svg";
 
-const Transport = ({ title, length, width, height, volume, load_capacity, load_side, capacity, help_text, transport_body, handleShow }) => {
+const Transport = ({ title, load_capacity, description, height, capacity, transport_body_title, load_side, length, width,volume, handleShow }) => {
 
     const handlePopupOpen = () => {
         handleShow()
     }
 
-
     return (
-        <>
-            <h3 className="title-transport">
-                {title}
+        <div className="transport-container">
+            <h3 className="transport-container__title">
+                { title }
             </h3>
-            <div className="transport">
+            <p className="transport-container__subscribe">
+                { description }
+            </p>
+            <h4 className="transport-container__character">
+                Характеристики
+            </h4>
+            <div className="transport-container__description transport">
                 <div className="transport__subscribe">
                     <div className="transport__subscribe_values">
                     <div className="transport__subscribe_values__item">
@@ -44,7 +49,7 @@ const Transport = ({ title, length, width, height, volume, load_capacity, load_s
                     </div>
                     <div className="transport__subscribe_values__item">
                         <div className="transport__subscribe_values__item_text">
-                            Тип кузова: { transport_body }
+                            Тип кузова: { transport_body_title }
                         </div>
                     </div>
                     <div className="transport__subscribe_values__item">
@@ -57,11 +62,6 @@ const Transport = ({ title, length, width, height, volume, load_capacity, load_s
                             Размеры кузова: { `${width}м x${length}м x${height}м` }
                         </div>
                     </div>
-                    <div className="transport__subscribe_values__item margin-item">
-                        <div className="transport__subscribe_values__item_text">
-                            <strong>{ help_text  }</strong>
-                        </div>
-                    </div>
                     <div className="transport__subscribe_values__item">
                         <button className="transport__subscribe_values__item_button" onClick={ handlePopupOpen }>
                             Заказать перевозку этим авто
@@ -69,11 +69,8 @@ const Transport = ({ title, length, width, height, volume, load_capacity, load_s
                     </div>
                 </div>
                 </div>
-                <div className="transport__img">
-                    <img src={ auto } alt={ title }/>
-                </div>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -1,10 +1,7 @@
 .why-us-component
-  background-color: rgba(242, 242, 242, 1)
-  border-radius: 30px
-  width: 100%
-  margin: 50px auto 0 auto
+  width: 93%
+  margin: 50px 0 0 0
   &__container
-    padding: 40px
     &_title
       color: rgba(0, 110, 188, 1)
       font-size: 54px
@@ -16,28 +13,45 @@
       gap: 30px
 .plash
   display: flex
-  flex-direction: row
-  align-items: center
-  margin-bottom: 35px
-  &__img
-    margin-right: 30px
-    img
-      max-width: 44px
-      width: 100%
+  flex-direction: column
+  align-items: flex-end
+  justify-content: space-between
+  width: 40%
+  min-width: 372px
+  max-width: 372px
+  height: 594px
+  border-radius: 30px
+  padding: 60px 0 20px 45px
+  box-sizing: border-box
   &__title
-    color: black
-    font-size: 18px
+    font-size: 22px
+    font-style: normal
     font-weight: 400
+    color: #FFFFFF
+    margin-bottom: 10%
+  //&__img
+  //  margin-right: -10px
+.plash .plash0
+  background-image: url("../../media/img/card1.png")
+
+.swiper-slide
+  width: 30%
 
 
 @media only screen and (min-width: 1920px)
   .plash
-    &__img
-      img
-        max-width: 50px
-        width: 50px
     &__title
       font-size: 24px
+  .swiper-slide
+    width: 20%
+
+@media only screen and (max-width: 1440px)
+  .swiper-slide
+    width: 35%
+
+@media only screen and (max-width: 1150px)
+  .swiper-slide
+    width: 40%
 
 @media only screen and (max-width: 1024px)
   .why-us-component
@@ -45,18 +59,34 @@
       &_plash
         grid-template-columns: 48% 48%
         gap: 25px
+  .swiper-slide
+    width: 50%
+
+@media only screen and (max-width: 768px)
+  .swiper-slide
+    width: 70%
 
 @media only screen and (max-width: 650px)
   .why-us-component
     &__container
-      padding: 30px 25px
       &_plash
         grid-template-columns: 100%
         gap: 0
       &_title
         font-size: 36px
   .plash__img img
-    max-width: 30px
-    min-width: 30px
+    width: 100%
   .plash
     margin-bottom: 20px
+    width: 93%
+    min-width: min-content
+    max-width: max-content
+    //&__img
+    //  margin-right: -144px
+  .swiper-slide
+    width: 100%
+
+@media only screen and (max-width: 500px)
+  .plash
+    .plash__img
+      margin-right: 0

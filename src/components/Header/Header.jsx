@@ -22,9 +22,6 @@ const Header = () => {
                     </p>
                     <Form />
                 </div>
-                {/*<div className="header-component__img">*/}
-                {/*    <img src={auto} alt="фотография грузовика" />*/}
-                {/*</div>*/}
             </div>
         </header>
     );

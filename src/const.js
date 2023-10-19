@@ -1,10 +1,11 @@
-export const backendHost = '';
+export const backendHost = 'http://raigored.beget.tech';
 
 export const initialState = {
+    name: "",
+    contact_phone: "",
     departure: "",
-    description: "",
-    full_name: "",
-    destination: "",
+    arrival: "",
     weight: "",
-    contact_phone: ""
+    description: "",
+    transport: ""
 }
