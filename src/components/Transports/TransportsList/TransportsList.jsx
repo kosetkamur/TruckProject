@@ -34,7 +34,7 @@ const TransportsList = ({handleShow}) => {
                                description={transport.description}
                                height={transport.height}
                                capacity={transport.capacity}
-                               transport_body_title={transport.transport_body_title}
+                               transport_body={transport.transport_body}
                                load_side={transport.load_side}
                                length={transport.length}
                                volume={transport.volume}

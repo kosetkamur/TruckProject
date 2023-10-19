@@ -3,7 +3,7 @@ import icon from "../../../media/img/icon.svg";
 import "./Transport.sass";
 import auto from ".././../../media/img/auto.svg";
 
-const Transport = ({ title, load_capacity, description, height, capacity, transport_body_title, load_side, length, width,volume, handleShow }) => {
+const Transport = ({ title, load_capacity, description, height, capacity, transport_body, load_side, length, width,volume, handleShow }) => {
 
     const handlePopupOpen = () => {
         handleShow()
@@ -49,7 +49,7 @@ const Transport = ({ title, load_capacity, description, height, capacity, transp
                     </div>
                     <div className="transport__subscribe_values__item">
                         <div className="transport__subscribe_values__item_text">
-                            Тип кузова: { transport_body_title }
+                            Тип кузова: { transport_body }
                         </div>
                     </div>
                     <div className="transport__subscribe_values__item">
