@@ -11,7 +11,7 @@ import MeadiaTransport from "../MeadiaTransport/MeadiaTransport";
 
 const TransportsList = ({handleShow, cat}) => {
     async function fetchTransport(cat = 1) {
-        const response = await axios.get(`${backendHost}/api/goods.transport.list?transport_make_id=${cat}`);
+        const response = await axios.get(`${backendHost}/api/goods.transport?transport_make_id=${cat}`);
         return response.data;
     }
 
