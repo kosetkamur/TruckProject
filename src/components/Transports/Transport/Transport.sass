@@ -16,47 +16,54 @@
     font-size: 24px
     font-weight: 700
 
-  &__transport
+  &__description
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: center
-    &__subscribe
+    .transport
+      margin-bottom: 50px
       display: flex
-      flex-direction: column
-      &_values
-        &__item
-          display: flex
-          flex-direction: row
-          align-items: center
-          align-self: center
-          padding-bottom: 5px
-          &_img
-            padding-right: 14px
-            max-width: 24px
-            width: 100%
-          &_text
-            color: #3F3E3E
-            font-size: 18px
-            font-weight: 400
-          &_button:hover
-            border: 2px solid rgba(0, 110, 188, 1)
-            background-color: #F2F2F2
-            color: rgba(0, 110, 188, 1)
-            transition: 0.3s
-          &_button
-            max-width: 391px
-            width: 100%
-            height: 62px
-            border-radius: 10px
-            color: white
-            background-color: #006EBC
-            border: none
-            font-size: 15px
-            font-weight: 700
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      &__subscribe
+        display: flex
+        flex-direction: column
+        &_values
+          &__item
             display: flex
-            justify-content: center
+            flex-direction: row
             align-items: center
+            align-self: center
+            padding-bottom: 5px
+            &_img
+              padding-right: 14px
+              max-width: 24px
+              width: 100%
+            &_text
+              color: #3F3E3E
+              font-size: 18px
+              font-weight: 400
+            &_button:hover
+              border: 2px solid rgba(0, 110, 188, 1)
+              background-color: #F2F2F2
+              color: rgba(0, 110, 188, 1)
+              transition: 0.3s
+            &_button
+              max-width: 391px
+              min-width: max-content
+              width: 100%
+              padding: 15px 20px
+              border-radius: 10px
+              color: white
+              background-color: #006EBC
+              border: none
+              font-size: 15px
+              font-weight: 700
+              display: flex
+              justify-content: center
+              align-items: center
 
 .margin-item
   margin-bottom: 30px
@@ -78,8 +85,15 @@
               min-width: 27px
 
 @media only screen and (max-width: 600px)
-  .title-transport
-    font-size: 24px
+  .transport-container
+    &__title
+      font-size: 24px
+    &__subscribe
+      font-size: 18px
+    &__character
+      font-size: 18px
+    &__description .transport__subscribe_values__item_text
+      font-size: 16px
   .transport
     margin-bottom: 50px
     display: flex

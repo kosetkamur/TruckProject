@@ -19,11 +19,10 @@ const MeadiaTransport = ({ media }) => {
         >
             {
                 media.map(media =>
-                    <SwiperSlide>
+                    <SwiperSlide key={ media.id }>
                         <ImagesTransport
                             title={ media.title }
-                            icon={ media.icon }
-                            key={ media.id } />
+                            icon={ media.icon } />
                     </SwiperSlide>)
             }
         </Swiper>

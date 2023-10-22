@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import './Burger.sass'
 import menu from '../../../media/img/menu.svg'
-import SideBar from "./SideBar/SideBar";
 import logo from "../../../media/img/logo.svg";
 
-const BurgerMenu = () => {
+const BurgerMenu = ({ openBurgerMenu }) => {
 
-    const [ hide, setHide ] = useState(false);
+    const openMenu = () => {
+        openBurgerMenu();
+    }
 
     return (
         <div className="burger-menu-container">
@@ -16,13 +17,9 @@ const BurgerMenu = () => {
                     <img src={logo} alt="Логотип ООО ПТК"/>
                 </a>
             </div>
-            {
-                (hide) ? <SideBar closeSideBar={ () => setHide(false) } /> :
-                    <div><button className="burger-menu" onClick={ () => setHide(true) }>
-                        <img src={ menu } alt="меню"/>
-                    </button></div>
-            }
-
+            <button className="burger-menu" onClick={ openMenu }>
+                <img src={ menu } alt="меню"/>
+            </button>
         </div>
     );
 };

@@ -13,7 +13,6 @@ const WhyUs = () => {
     const [ cooperation, setCooperation ] = useState([]);
 
     useEffect(() => {
-        console.log()
         GetWhyUs().then(data => {
             setCooperation(data);
         });
@@ -29,12 +28,11 @@ const WhyUs = () => {
                 >
                     {
                         cooperation.map((data) =>
-                            <SwiperSlide>
+                            <SwiperSlide key={ data.card_color }>
                                 <PlashWhyUs className="swiper-slide"
                                                     description={ data.description }
                                                     icon={ data.icon }
-                                                    card_color={ data.card_color }
-                                                    key={ data.icon } />
+                                                    card_color={ data.card_color } />
                             </SwiperSlide>
                         )
                     }

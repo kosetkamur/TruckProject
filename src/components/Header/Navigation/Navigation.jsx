@@ -21,7 +21,7 @@ const Navigation = () => {
                         <a href="#transport">Транспорт</a>
                     </div>
                     <div className="nav__container_items__item">
-                        <a href="#conditions">Условия</a>
+                        <a href="#team">Руководство</a>
                     </div>
                     <div className="nav__container_items__item">
                         <a href="#contacts">Контакты</a>

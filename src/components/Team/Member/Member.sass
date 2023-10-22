@@ -15,7 +15,9 @@
       height: 73%
       background-color: #006ebc
       display: none
+      border-radius: 15px
       &__text
+        margin-top: 20px
         color: #FFFFFF
         font-size: 22px
         font-style: normal
@@ -42,3 +44,17 @@
       font-weight: 400
       padding: 13px 0 0 0
       margin: 0
+
+@media only screen and (max-width: 650px)
+  .member-component
+    &__container
+      &_tooltip
+        height: 76%
+        &__text
+          font-size: 18px
+      &_last-name
+        font-size: 18px
+      &_name
+        font-size: 18px
+      &_position
+        font-size: 18px

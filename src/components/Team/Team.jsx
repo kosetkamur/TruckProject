@@ -19,34 +19,36 @@ const Team = () => {
     }, []);
 
     return (
-        <Swiper
-            effect={'coverflow'}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={'auto'}
-            coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 80,
-                modifier: 1,
-                slideShadows: false,
-            }}
-            pagination={false}
-            modules={[EffectCoverflow, Pagination]}
-            className="teamSwiper"
-        >
+        <div id="team">
+            <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 80,
+                    modifier: 1,
+                    slideShadows: false,
+                }}
+                pagination={false}
+                modules={[EffectCoverflow, Pagination]}
+                className="teamSwiper"
+            >
 
-                {
-                    members.map(member =>
-                        <SwiperSlide><Member first_name={ member.first_name }
-                          responsibilities={ member.responsibilities }
-                          icon={ member.icon }
-                          middle_name={ member.middle_name }
-                          last_name={ member.last_name }
-                          position={ member.position } /></SwiperSlide>)
-                }
+                    {
+                        members.map(member =>
+                            <SwiperSlide key={member.first_name}><Member first_name={ member.first_name }
+                              responsibilities={ member.responsibilities }
+                              icon={ member.icon }
+                              middle_name={ member.middle_name }
+                              last_name={ member.last_name }
+                              position={ member.position } /></SwiperSlide>)
+                    }
 
-        </Swiper>
+            </Swiper>
+        </div>
     );
 };
 
