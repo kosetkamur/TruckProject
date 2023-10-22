@@ -51,11 +51,20 @@
 
 .margin-item
   margin-bottom: 30px
-//.mediaSwiper
-//  max-width: 472px
-//  width: 100%
+.images-transport
+  object-position: center center
+  width: 100%
+  max-width: 515px
+
+@media only screen and (max-width: 1024px)
+  .images-transport
+    padding-right: 10px
+    box-sizing: border-box
 
 @media only screen and (max-width: 900px)
+  .images-transport
+    max-width: none
+    margin-bottom: 30px
   .transport
     margin-bottom: 50px
     display: flex

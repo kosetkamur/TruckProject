@@ -36,7 +36,7 @@ form
       font-size: 16px
       color: #3590D6
       padding: 10px 0
-      text-align: center
+      text-align: left
       width: 100%
       max-width: 390px
   .form-items
@@ -100,6 +100,9 @@ form
     .form-items
       grid-template-columns: 98%
       grid-template-rows: repeat(6, auto)
+      gap: 0
+      &__item
+        margin-bottom: 10px
       .item1
         grid-column: 1 / 2
         grid-row: 1 / 2

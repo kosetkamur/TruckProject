@@ -1,35 +1,20 @@
 import React, { useEffect, useState } from 'react';
 
 import "./Transports.sass";
-import MeadiaTransport from "./MeadiaTransport/MeadiaTransport";
 import {getMakes} from "../../api/getMakesData";
 import TransportsList from "./TransportsList/TransportsList";
-import {backendHost} from "../../const";
-import axios from "axios";
-import {useQuery} from "react-query";
-import {GetTransports} from "../../api/getTransportsData";
 
 
 const Transports = ({ handleShow }) => {
 
     const [ categories, setCategories ] = useState([]);
-    // const [ cat, setCat ] = useState(1);
-    const [ transports, setTransport ] = useState([]);
+    const [ cat, setCat ] = useState(1);
+    const [ activeButton, setActiveButton ] = useState(1);
 
     useEffect(() => {
-        GetTransports().then(data => setTransport(data));
         getMakes().then(data => setCategories(data));
     }, []);
 
-    // async function fetchTransport(id = 1) {
-    //     const data = await axios.get(`${backendHost}/api/goods.transport.list?transport_make_id=${id}`);
-    //     return data.data;
-    // }
-
-    // const { data } = useQuery(
-    //     ["transport_make_id", cat],
-    //     () => fetchTransport(cat),
-    //     { keepPreviousData: true });
     return (
         <>
             <div className="transports-component" id="transport">
@@ -42,23 +27,19 @@ const Transports = ({ handleShow }) => {
                     </p>
                 </div>
                 <div className="transports-component__container">
-                    <div className="transports-component__container_images">
-                        {
-                            transports.map(transport => <MeadiaTransport media={ transport.media }/>)
-                        }
-                    </div>
                     <div className="transports-component__container_transports">
-                        {/*<div className="transports-component__container_transports__buttons">*/}
-                        {/*    {*/}
-                        {/*        categories.map(category =>*/}
-                        {/*            <div key={category.id} className="transports-component__container_transports__buttons_button">*/}
-                        {/*                <button onClick={ () => setCat(category.id) }>{ category.title }</button>*/}
-                        {/*            </div>*/}
-                        {/*        )*/}
-                        {/*    }*/}
-                        {/*</div>*/}
+                        <div className="transports-component__container_transports__pole"></div>
+                        <div className="transports-component__container_transports__buttons">
+                            {
+                                categories.map(category =>
+                                    <div key={category.id} onClick={() => setActiveButton(category.id)} className={`transports-component__container_transports__buttons_button ${category.id === activeButton? 'active' : ''}`}>
+                                        <button onClick={ () => setCat(category.id) }>{ category.title }</button>
+                                    </div>
+                                )
+                            }
+                        </div>
                     </div>
-                    <TransportsList handleShow={handleShow}/>
+                    <TransportsList handleShow={handleShow} cat={cat}/>
                 </div>
             </div>
         </>

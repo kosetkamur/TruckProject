@@ -13,14 +13,34 @@
     background-color: #F2F2F2
     border-radius: 30px
     padding: 40px
-    display: flex
-    flex-direction: row
-    &_images
-      width: 45%
-      margin-right: 20px
+    &_transports
+      display: grid
+      grid-template-columns: 50% 50%
+      &__buttons
+        display: flex
+        flex-direction: row
+        &_button
+          display: flex
+          align-items: center
+          button
+            margin-right: 20px
+            padding: 0
+            background: transparent
+            border: none
+            color: #000000
+            font-size: 24px
+            font-weight: bold
+            text-transform: uppercase
+        &_button.active
+          button
+            color: #ffff
+            background: #006EBC
+            padding: 10px
+            border-radius: 10px
+
 
 .swiper
-  width: 100%
+  width: 90%
   height: 100%
 .swiper-slide
   text-align: left
@@ -40,11 +60,31 @@
   opacity: 1
   background: rgba(0, 0, 0, 0.2)
 
+
 @media only screen and (max-width: 1024px)
   .transports-component__title
     margin: 0 0 35px 0
   .title-transport
     margin: 0 0 30px 0
+  .swiper
+    width: 100%
+    height: 100%
+
+@media only screen and (max-width: 900px)
+  .transports-component__container
+    &_transports
+      grid-template-columns: 100%
+
+@media only screen and (max-width: 768px)
+  .swiper-slide
+    justify-content: center
+  .transports-component
+    padding: 0
+    margin: 50px 0
+    &__container_images
+      width: 100%
+
+
 
 @media only screen and (max-width: 600px)
   .transports-component
@@ -55,8 +95,6 @@
     &__text
       padding: 0 0 0 25px
     &__container
-      display: flex
-      flex-direction: column-reverse
       &_images
         width: 100%
   .swiper-pagination-bullet
@@ -64,4 +102,4 @@
 
 @media only screen and (max-width: 475px)
   .transports-component__container
-    padding: 20px
+    padding: 40px 20px

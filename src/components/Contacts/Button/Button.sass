@@ -4,6 +4,7 @@
   display: flex
   flex-direction: column
   align-content: space-between
+  justify-content: space-around
   max-width: 297px
   min-width: 297px
   width: 100%
@@ -34,6 +35,11 @@
     text-decoration: underline
 
 
+@media only screen and (max-width: 1200px)
+  .contact-button
+    max-width: 297px
+    min-width: 250px
+    padding: 0 25px 5px 45px
 
 @media only screen and (max-width: 1024px)
   .contact-button
@@ -45,21 +51,15 @@
   .contact-button__info
     font-size: 16px
 
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 800px)
   .contact-button
-    min-width: 200px
-    height: 117px
-  .contact-button__title p
-    font-size: 16px
-  .contact-button__info
-    font-size: 14px
-  .contact-button__title img
-    min-width: 15px
-    max-width: 15px
+    min-width: 300px
   .contacts-component__contact_ref
     gap: 5px
-  .contacts-component__contact_ref
-    flex-direction: column
+
+@media only screen and (max-width: 650px)
+  .contact-button
+    min-width: 260px
 
 @media only screen and (max-width: 600px)
   .contact-button

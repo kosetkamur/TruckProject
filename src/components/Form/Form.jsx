@@ -7,10 +7,12 @@ import PhoneMask from "../PhoneMask/Phone";
 import Load from "../Load/Load";
 import {initialState} from "../../const";
 
-const Form = () => {
+const Form = ({idTranport}) => {
     const [ data, setData ] = useState(initialState);
     const [ response, setResponse ] = useState({});
     const [ isLoading, setIsLoading ] = useState(false);
+
+
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -24,12 +26,14 @@ const Form = () => {
         formdata.append('arrival', data.arrival);
         formdata.append('weight', data.weight);
         formdata.append('description', data.description);
-        formdata.append('transport', data.transport);
+        if(idTranport) formdata.append('transport', idTranport);
+
+
         axios({
             method: "post",
             url: "http://raigored.beget.tech/api/bids.price.create",
             data: formdata,
-            headers: { "Content-Type": "multipart/form-data" },
+            headers: { "Content-Type": "application/json" },
         })
             .then(res => {
                 setIsLoading(false);
@@ -88,7 +92,7 @@ const Form = () => {
                     </div>
                     <div className="form-items__item item3">
                         <input type='text'
-                               name='full_name'
+                               name='name'
                                placeholder='Ваше имя'
                                className="form-input"
                                value={ data.name || "" }
@@ -97,7 +101,7 @@ const Form = () => {
                     </div>
                     <div className="form-items__item item4">
                         <input type='text'
-                               name='destination'
+                               name='arrival'
                                placeholder='Куда везти'
                                className="form-input"
                                value={ data.arrival || "" }

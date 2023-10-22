@@ -3,7 +3,7 @@ import React from 'react';
 import './Popup.sass';
 import Form from "../Form/Form";
 
-const Popup = ({ handleClose }) => {
+const Popup = ({ handleClose, idTranport }) => {
     const handlePopupClose = () => {
         handleClose()
     }
@@ -19,7 +19,7 @@ const Popup = ({ handleClose }) => {
 
                     </button>
                 </div>
-                <Form />
+                <Form idTranport={idTranport} />
             </div>
         </div>
     );

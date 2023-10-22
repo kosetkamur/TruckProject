@@ -6,7 +6,7 @@ import Agreement from "./Agreement/Agreement";
 const Submit = ({ response }) => {
     let okResponse;
     if(response.status === 200){
-        okResponse = <p style={{color:'green'}}>Ваша заявка успешно отправлена</p>
+        okResponse = <p style={{color:'white'}}>Ваша заявка успешно отправлена</p>
     }
     return (
         <div className="form-submit">

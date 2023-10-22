@@ -1,0 +1,39 @@
+.burger-menu-container
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  margin: 0 auto
+  background-color: #F2F2F2
+  border-radius: 70px
+  padding: 15px 30px 15px 22px
+  width: 86%
+  box-sizing: border-box
+  &__logo
+    max-width: 50px
+    a
+      img
+        max-width: 50px
+        width: 50px
+        height: 50px
+        min-width: 50px
+  .burger-menu
+    background-color: transparent
+    border: none
+    padding-top: 3%
+
+
+@media only screen and (max-width: 768px)
+  .burger-menu-container
+    padding: 5px 15px 5px 15px
+
+@media only screen and (max-width: 600px)
+  .burger-menu-container
+    width: 95%
+
+@media only screen and (max-width : 375px)
+  .burger-menu-container
+    .nav__logo
+      a
+        img
+          max-width: 55px

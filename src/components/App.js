@@ -15,16 +15,18 @@ import Team from "./Team/Team";
 
 function App() {
   const [ showPopup, setShowPopup ] = useState(false);
+  const [ idTransport, setIdTransport ] = useState('');
 
-  const handleShow = () => {
+  const handleShow = (id) => {
       setShowPopup(true);
+      setIdTransport(id);
   }
 
   return (
       <>
         <Header />
         <div className="App">
-            { showPopup && <Popup handleClose = { () => setShowPopup(false) } />}
+            { showPopup && <Popup idTranport={ idTransport } handleClose = { () => setShowPopup(false) } />}
             <Title title={"Транспорт"} />
             <Transports handleShow={ handleShow }/>
             <Title title={"Почему мы"} />

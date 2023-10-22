@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import './BurgerMenu.sass'
+import './Burger.sass'
 import menu from '../../../media/img/menu.svg'
 import SideBar from "./SideBar/SideBar";
 import logo from "../../../media/img/logo.svg";
@@ -11,7 +11,7 @@ const BurgerMenu = () => {
 
     return (
         <div className="burger-menu-container">
-            <div className="nav__logo">
+            <div className="burger-menu-container__logo">
                 <a href="#">
                     <img src={logo} alt="Логотип ООО ПТК"/>
                 </a>

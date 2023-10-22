@@ -1,0 +1,12 @@
+.transport-list-component
+  width: 100%
+  box-sizing: border-box
+  &__container
+    display: grid
+    grid-template-columns: 50% 50%
+
+
+@media only screen and (max-width: 900px)
+  .transport-list-component__container
+    display: flex!important
+    flex-direction: column-reverse

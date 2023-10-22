@@ -3,10 +3,10 @@ import icon from "../../../media/img/icon.svg";
 import "./Transport.sass";
 import auto from ".././../../media/img/auto.svg";
 
-const Transport = ({ title, load_capacity, description, height, capacity, transport_body, load_side, length, width,volume, handleShow }) => {
+const Transport = ({ cat, title, load_capacity, description, height, capacity, transport_body, load_side, length, width,volume, handleShow }) => {
 
     const handlePopupOpen = () => {
-        handleShow()
+        handleShow(cat)
     }
 
     return (

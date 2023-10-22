@@ -1,8 +1,26 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import "./Footer.sass";
 import logo from "../../media/img/logo.svg";
+import {GetAgreement} from "../../api/getAgreement";
+import {backendHost} from "../../const";
 
 const Footer = () => {
+
+    const [ file, setFile ] = useState();
+
+    let agreementFile;
+
+    useEffect(() => {
+        GetAgreement().then(resp => {
+            setFile(resp);
+        });
+    }, []);
+
+    if(typeof file === 'object') {
+        agreementFile = backendHost + file.file
+    }
+
+
     return (
         <footer>
             <div className="footer__container">
@@ -28,7 +46,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="footer__politic_href">
-                    <a href="#">
+                    <a href={ agreementFile } download>
                         Политика конфиденциальности
                     </a>
                 </div>
