@@ -22,14 +22,13 @@ const Team = () => {
         <div id="team">
             <Swiper
                 effect={'coverflow'}
-                grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={'auto'}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
-                    depth: 80,
-                    modifier: 1,
+                    depth: 90,
+                    modifier: 2,
                     slideShadows: false,
                 }}
                 pagination={false}
