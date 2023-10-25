@@ -1,4 +1,4 @@
-export const backendHost = 'http://raigored.beget.tech';
+export const backendHost = 'http://pm2023cl.beget.tech';
 
 export const initialState = {
     name: "",
