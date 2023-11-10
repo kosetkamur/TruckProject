@@ -1,4 +1,4 @@
-export const backendHost = 'http://pm2023cl.beget.tech';
+export const backendHost = 'https://оооптк.рф';
 
 export const initialState = {
     name: "",

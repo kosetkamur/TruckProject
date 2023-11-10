@@ -31,7 +31,7 @@ const Form = ({idTranport}) => {
 
         axios({
             method: "post",
-            url: "http://pm2023cl.beget.tech/api/bids.price.create",
+            url: "https://оооптк.рф/api/bids.price.create",
             data: formdata,
             headers: { "Content-Type": "application/json" },
         })
