@@ -60,7 +60,7 @@ const Transport = ({ cat, title, load_capacity, description, height, capacity, t
                     </div>
                     <div className="transport__subscribe_values__item margin-item">
                         <div className="transport__subscribe_values__item_text">
-                            Размеры кузова: { `${width}м x${length}м x${height}м` }
+                            Размеры кузова: { `${width} м x ${length} м x ${height} м` }
                         </div>
                     </div>
                     <div className="transport__subscribe_values__item">

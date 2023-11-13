@@ -26,7 +26,7 @@ const Contacts = () => {
                     <a href="tel:+7(910) 850-40-16 "><Button title={"Служба логистики"} address={ contacts.logistics_service_phone } key={"tel2"} /></a>
                 </div>
                 <div className="contacts-component__contact_ref">
-                    <Button title={"Юр. адрес"} address={ contacts.legal_address } key={"address"} />
+                    <a href="https://yandex.ru/maps/?rtext=~55.776502%2C37.537119"><Button title={"Юр. адрес"} address={ contacts.legal_address } key={"address"} /></a>
                     <a href="mailto:pm-2023@indox.ru"><Button title={"E-mail"} address={ contacts.email} key={"email"} /></a>
                 </div>
             </div>
